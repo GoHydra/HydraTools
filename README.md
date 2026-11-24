@@ -9,7 +9,7 @@ Administrative tools that support Hydra outside its guest scripting context. Run
 | [Add-HydraTenantServicePrincipal.ps1](Add-HydraTenantServicePrincipal.ps1) | Creates or reuses a service principal, generates a client secret, deploys Hydra custom roles, and assigns Azure permissions at subscription or resource-group scope. Can also configure Graph application permissions and consent. | Az.Accounts, Az.Resources, Microsoft.Graph.Authentication, and Microsoft.Graph.Applications; an identity allowed to create the relevant application, role definitions, assignments, and optional Graph consent. |
 | [Invoke-HydraAgentAvdDeployment.ps1](Invoke-HydraAgentAvdDeployment.ps1) | Deploys the Hydra agent to AVD session-host VMs through Azure VM Run Command. | Authenticated Azure PowerShell with Az.Accounts, Az.Resources, Az.DesktopVirtualization, and Az.Compute; host-pool/VM discovery and Run Command rights, plus VM-start rights if using `-PowerOn`. |
 | [Get-PersonalPowerOnSchedules.sql](Get-PersonalPowerOnSchedules.sql) | Lists enabled personal power-on schedules from the Hydra database. | SQL client and read access to `dbo.SessionHosts`; SQL JSON and STRING_AGG support, and the matching Hydra schema. |
-| [Get-HydraAPISessionHosts.ps1](Get-HydraAPISessionHosts.ps1) | Example API call for getting all session hosts managed by Hydra. Can be used adjusted/filtered and fed into other API-related scripts. |
+| [Get-HydraAPISessionHosts.ps1](Get-HydraAPISessionHosts.ps1) | Example API call for getting all session hosts managed by Hydra. Can be used adjusted/filtered and fed into other API-related scripts. | Setup REST API as demonstrated in Hydra Docs under Maintenance and Operations -> Hydra REST API |
 
 ## Create a tenant service principal
 
